@@ -53,6 +53,7 @@ def ContinuousOnClosedInterval (f : ℝ → ℝ) (a b : ℝ) : Prop :=
   a ≤ b ∧ ∀ (x : ℝ), x ∈ closedInterval a b → ContinuousFunctionAt f x
 def BoundedFunction (X : Set ℝ) (f : ℝ → ℝ) (A B : ℝ): Prop :=
   ∀ (x : ℝ), x ∈ X → A ≤ f x ∧ f x ≤ B
+
 theorem BoundednessTheorem (f : ℝ → ℝ) (a b : ℝ) :
   ContinuousOnClosedInterval f a b → ∃ (A B : ℝ),BoundedFunction (closedInterval a b) f A B :=by
   sorry
